@@ -1,8 +1,8 @@
 ## 项目名称
-* ER2K_1.12_PBR
+* ER2K_1.12_PBR_512X
 
 ## Entry Name
-* ER2K_1.12_PBR
+* ER2K_1.12_PBR_512X
 
 ## 运行条件
 * 我的世界版本
