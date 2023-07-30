@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: vimtor/action-zip@v1
         with:
-          files: 512X/*
+          files: 512X/
           dest: ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
       # 压缩1024X zip包
       - name: Get version
@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: vimtor/action-zip@v1
         with:
-          files: 1024X/*
+          files: 1024X/
           dest: ER2K_PBR_1024X_${{ steps.get_version1024x.outputs.VERSION }}.zip
       # 压缩2048X zip包 大小超过2G
       # - name: Get version
@@ -36,7 +36,7 @@ jobs:
       # - uses: actions/checkout@v2
       # - uses: vimtor/action-zip@v1
         # with:
-          # files: 2048X/*
+          # files: 2048X/
           # dest: ER2K_PBR_2048X_${{ steps.get_version2048x.outputs.VERSION }}.zip
 
       # 创建Release
