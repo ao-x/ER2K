@@ -19,7 +19,7 @@ jobs:
       - uses: vimtor/action-zip@v1
         with:
           files: 512X/
-          dest: ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
+          dest: ./zip/ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
       # 压缩1024X zip包
       - name: Get version 1024x
         id: get_version1024x
@@ -28,7 +28,7 @@ jobs:
       - uses: vimtor/action-zip@v1
         with:
           files: 1024X/
-          dest: ER2K_PBR_1024X_${{ steps.get_version1024x.outputs.VERSION }}.zip
+          dest: ./zip/ER2K_PBR_1024X_${{ steps.get_version1024x.outputs.VERSION }}.zip
       # 压缩2048X zip包 大小超过2G
       # - name: Get version
         # id: get_version2048x
@@ -37,7 +37,7 @@ jobs:
       # - uses: vimtor/action-zip@v1
         # with:
           # files: 2048X/
-          # dest: ER2K_PBR_2048X_${{ steps.get_version2048x.outputs.VERSION }}.zip
+          # dest: ./zip/ER2K_PBR_2048X_${{ steps.get_version2048x.outputs.VERSION }}.zip
 
       # 创建Release
       - name: Create Release
@@ -57,7 +57,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
+          asset_path: ./zip/ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
           asset_name: ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
           asset_content_type: application/zip
       # 上传1024X zip包
@@ -67,16 +67,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./ER2K_PBR_1024X_${{ steps.get_version1024x.outputs.VERSION }}.zip
+          asset_path: ./zip/ER2K_PBR_1024X_${{ steps.get_version1024x.outputs.VERSION }}.zip
           asset_name: ER2K_PBR_1024X_${{ steps.get_version1024x.outputs.VERSION }}.zip
           asset_content_type: application/zip
       # 上传2048X zip包
-      # - name: Upload Release Asset
+      # - name: Upload Release Asset 2048X
         # uses: actions/upload-release-asset@v1
         # env:
           # GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         # with:
           # upload_url: ${{ steps.create_release.outputs.upload_url }}
-          # asset_path: ./R2K_1.12_PBR_${{ steps.get_version2048x.outputs.VERSION }}.zip
-          # asset_name: R2K_1.12_PBR_${{ steps.get_version2048x.outputs.VERSION }}.zip
+          # asset_path: ./zip/ER2K_PBR_2048X_${{ steps.get_version2048x.outputs.VERSION }}.zip
+          # asset_name: ER2K_PBR_2048X_${{ steps.get_version2048x.outputs.VERSION }}.zip
           # asset_content_type: application/zip
