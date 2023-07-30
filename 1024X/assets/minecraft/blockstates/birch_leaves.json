@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": [ { "model": "birch_leaves", "weight": 1 }, { "model": "birch_leaves_1", "weight": 9 }]
+    }
+}
