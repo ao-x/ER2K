@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 压缩512X zip包
-      - name: Get version
+      - name: Get version 512x
         id: get_version512x
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
           files: 512X/
           dest: ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
       # 压缩1024X zip包
-      - name: Get version
+      - name: Get version 1024x
         id: get_version1024x
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - uses: actions/checkout@v2
@@ -51,7 +51,7 @@ jobs:
           draft: false
           prerelease: false
       # 上传512X zip包
-      - name: Upload Release Asset
+      - name: Upload Release Asset 512x
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
@@ -61,7 +61,7 @@ jobs:
           asset_name: ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
           asset_content_type: application/zip
       # 上传1024X zip包
-      - name: Upload Release Asset
+      - name: Upload Release Asset 1024x
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
