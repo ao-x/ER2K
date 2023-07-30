@@ -1,10 +1,10 @@
-name: Zip-Beta
+name: Zip-Alpha
 
 # 提交tag触发流水线
 on:
   push:
     tags:
-    - 'B*'
+    - 'A*'
 
 
 jobs:
