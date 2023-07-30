@@ -1,4 +1,4 @@
-name: Zip
+name: Zip-Beta
 
 # 提交tag触发流水线
 on:
@@ -21,7 +21,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           draft: false
-          prerelease: false
+          prerelease: true
 
       # 压缩512X zip包
       - name: Get version 512x

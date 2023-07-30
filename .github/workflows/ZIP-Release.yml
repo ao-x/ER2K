@@ -1,4 +1,4 @@
-name: Zip
+name: Zip-Release
 
 # 提交tag触发流水线
 on:
