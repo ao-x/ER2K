@@ -38,6 +38,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist.zip
-          asset_name: js-screen-shot-dist.zip
+          asset_path: ./R2K_1.12_PBR_2048X_${{ steps.get_version.outputs.VERSION }}.zip
+          asset_name: R2K_1.12_PBR_2048X_${{ steps.get_version.outputs.VERSION }}.zip
           asset_content_type: application/zip
