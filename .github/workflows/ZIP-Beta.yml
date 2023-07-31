@@ -65,16 +65,15 @@ jobs:
           asset_name: ER2K_PBR_1024X.zip
           asset_content_type: application/zip
 
-      # 大小超过2G暂不构建
       # 压缩2048X zip包
-      # - name: Get version
-        # id: get_version2048x
-        # run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-      # - uses: actions/checkout@v2
-      # - uses: vimtor/action-zip@v1
-        # with:
-          # files: 2048X/
-          # dest: 2048X/ER2K_PBR_2048X.zip
+      - name: Get version
+        id: get_version2048x
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+      - uses: actions/checkout@v2
+      - uses: vimtor/action-zip@v1
+        with:
+          files: 2048X/
+          dest: 2048X/ER2K_PBR_2048X.zip
 
       # 上传2048X zip包
       # - name: Upload Release Asset 2048X
