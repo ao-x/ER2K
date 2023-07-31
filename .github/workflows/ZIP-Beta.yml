@@ -31,7 +31,7 @@ jobs:
       - uses: vimtor/action-zip@v1
         with:
           files: 512X/
-          dest: 512X/ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
+          dest: 512X/ER2K_PBR_512X.zip
 
       # 上传512X zip包
       - name: Upload Release Asset 512x
@@ -40,8 +40,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: 512X/ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
-          asset_name: ER2K_PBR_512X_${{ steps.get_version512x.outputs.VERSION }}.zip
+          asset_path: 512X/ER2K_PBR_512X.zip
+          asset_name: ER2K_PBR_512X.zip
           asset_content_type: application/zip
 
       # 压缩1024X zip包
@@ -52,7 +52,7 @@ jobs:
       - uses: vimtor/action-zip@v1
         with:
           files: 1024X/
-          dest: 1024X/ER2K_PBR_1024X_${{ steps.get_version1024x.outputs.VERSION }}.zip
+          dest: 1024X/ER2K_PBR_1024X.zip
 
       # 上传1024X zip包
       - name: Upload Release Asset 1024x
@@ -61,8 +61,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: 1024X/ER2K_PBR_1024X_${{ steps.get_version1024x.outputs.VERSION }}.zip
-          asset_name: ER2K_PBR_1024X_${{ steps.get_version1024x.outputs.VERSION }}.zip
+          asset_path: 1024X/ER2K_PBR_1024X.zip
+          asset_name: ER2K_PBR_1024X.zip
           asset_content_type: application/zip
 
       # 大小超过2G暂不构建
@@ -74,7 +74,7 @@ jobs:
       # - uses: vimtor/action-zip@v1
         # with:
           # files: 2048X/
-          # dest: 2048X/ER2K_PBR_2048X_${{ steps.get_version2048x.outputs.VERSION }}.zip
+          # dest: 2048X/ER2K_PBR_2048X.zip
 
       # 上传2048X zip包
       # - name: Upload Release Asset 2048X
@@ -83,6 +83,6 @@ jobs:
           # GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         # with:
           # upload_url: ${{ steps.create_release.outputs.upload_url }}
-          # asset_path: 2048X/ER2K_PBR_2048X_${{ steps.get_version2048x.outputs.VERSION }}.zip
-          # asset_name: ER2K_PBR_2048X_${{ steps.get_version2048x.outputs.VERSION }}.zip
+          # asset_path: 2048X/ER2K_PBR_2048X.zip
+          # asset_name: ER2K_PBR_2048X.zip
           # asset_content_type: application/zip
