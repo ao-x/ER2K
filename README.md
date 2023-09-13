@@ -4,13 +4,19 @@
 ## Entry Name
 * ER2K_1.12_PBR
 
+## 官网
+* [er2k.ao-x.cn](https://er2k.ao-x.cn)
+
+## Official Website
+* [er2k.ao-x.cn](https://er2k.ao-x.cn)
+
 ## 运行条件
 * 我的世界版本
   * 1.12
 
 ## Condition
 * Minecraft Version
-  * version
+  * 1.12
 
 ## 运行说明
 * CPU
@@ -27,12 +33,6 @@
   * 16G+
 * Graphics card
   * In the absence of materials, the ptgi can meet the requirements of 30-60 frames or more when opening rt, and generally, 970 frames or more are not a problem.
-
-## 官网
-* [er2k.ao-x.cn](https://er2k.ao-x.cn)
-
-## Official Website
-* [er2k.ao-x.cn](https://er2k.ao-x.cn)
 
 ## 开源许可证
 * ER2K依据 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可证进行授权（您可以自由复制、散布、展示及演出本作品；若您改变、转变或改作本作品；您不能以商业目的而使用本作品，仅在遵守与本著作相同的授权条款下，您才能散布由本作品产生的衍生作品）
